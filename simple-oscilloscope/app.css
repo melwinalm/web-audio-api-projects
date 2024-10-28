@@ -1,0 +1,17 @@
+#powerLed{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: red;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #eb532e 0 -1px 9px, #ec7f53 0 2px 12px;
+}
+
+.powered-on{
+  background-color: green !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px !important;
+}
+
+#frequencySelector, #gainSelector{
+  width: 100%;
+}
