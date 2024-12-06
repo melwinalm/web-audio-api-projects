@@ -1,4 +1,5 @@
 let powerButton = document.getElementById("powerButton");
+let powerLed = document.getElementById("powerLed");
 let waveformType = document.getElementById("waveformType");
 let frequencySelector = document.getElementById("frequencySelector");
 let gainSelector = document.getElementById("gainSelector");
@@ -33,20 +34,20 @@ function init(){
   buffer = new Uint8Array(bufferSize);
   
   // Canvas initial setup
-  canvas.width = window.innerWidth;
-  canvas.height = "300";
-  waveform.fillStyle = "#19B5C2";
+  // canvas.width = window.innerWidth;
+  // canvas.height = "300";
+  waveform.fillStyle = "teal";
   waveform.fillRect(0, 0, canvas.width, canvas.height);
-  waveform.strokeStyle = "#A3FFFE";
-  waveform.lineWidth = "3";
+  waveform.strokeStyle = "aquamarine";
+  waveform.lineWidth = "5";
 }
 
 init();
 
-// On Power button cick
+// On Power button click
 powerButton.addEventListener("click", function(){
   isPowerredOn = !isPowerredOn;
-  let powerLed = document.getElementById("powerLed");
+
   if(isPowerredOn){
     powerLed.classList.add("powered-on");
   }
@@ -80,7 +81,6 @@ frequencySelector.addEventListener("change", function(event){
   if(oscillatorNode && isPowerredOn){
     oscillatorNode.frequency.value = freq;
   }
-
 });
 
 // On Oscillator type change

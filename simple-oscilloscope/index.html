@@ -7,29 +7,30 @@
 
 <body>
   <div>
-    <div id="powerLed"></div>
-    <button id="powerButton">Power On/Off</button>
+    <canvas id="canvas"></canvas>
   </div>
-
-  <div>
-    <span>Waveform Type</span>
-    <select id="waveformType">
-      <option>sine</option>
-      <option>square</option>
-      <option>sawtooth</option>
-      <option>triangle</option>
-    </select>
+  <div class="controls">
+    <div class="control">
+      <div id="powerLed"></div>
+      <button id="powerButton">Power On/Off</button>
+    </div>
     <div>
+      <span>Waveform Type</span>
+      <select id="waveformType">
+        <option>sine</option>
+        <option>square</option>
+        <option>sawtooth</option>
+        <option>triangle</option>
+      </select>
+    </div>
+    <div class="control">
       <label for="frequencySelector">Frequency: <span id="selectedFreq">440</span></label>
       <input id="frequencySelector" type="range" min="20" max="20000" step="1" value="440" />
     </div>
-    <div>
+    <div class="control">
       <label for="gainSelector">Gain: <span id="selectedGain">1</span></label>
       <input id="gainSelector" type="range" min="0" max="1" step="0.01" value="1" />
     </div>
-  </div>
-  <div>
-    <canvas id="canvas"></canvas>
   </div>
 
   <script src="script.js"></script>
