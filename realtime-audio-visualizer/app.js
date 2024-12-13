@@ -1,5 +1,3 @@
-let startButton = document.getElementById("startButton");
-
 let canvas = document.getElementById("canvas");
 let canvasContext = canvas.getContext("2d");
 
@@ -23,6 +21,9 @@ async function init() {
   analyser.fftSize = 2048;
   bufferSize = analyser.frequencyBinCount;
   buffer = new Uint8Array(bufferSize);
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
   canvasContext.fillStyle = "black";
   canvasContext.strokeStyle = "red";
