@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 20px 1fr;
+  grid-row-gap: 30px;
+}
