@@ -4,7 +4,7 @@ let linearFadeButton = document.getElementById("linearFadeButton");
 let audioContext;
 
 let audioBuffer1, audioBuffer2;
-let gain1Node, gain2Node;
+let gainNode1, gainNode2;
 let source1, source2;
 
 const FADE_DURATION = 4;
